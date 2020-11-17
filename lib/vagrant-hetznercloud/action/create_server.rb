@@ -43,9 +43,9 @@ module VagrantPlugins
             ssh_keys:        ssh_keys
           }
 
-          option[:location] = location unless location.nil?
-          option[:datacenter] = datacenter unless datacenter.nil?
-          option[:user_data] = user_data unless user_data.nil?
+          options[:location] = location unless location.nil?
+          options[:datacenter] = datacenter unless datacenter.nil?
+          options[:user_data] = user_data unless user_data.nil?
 
           begin
             server = env[:hetznercloud_compute].servers.create(options)
